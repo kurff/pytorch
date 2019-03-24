@@ -100,7 +100,8 @@ class AsyncNetBase : public NetBase {
       PoolsMap;
   PoolsMap cpu_pools_;
   PoolsMap gpu_pools_;
-  static __thread std::vector<int> stream_counters_;
+  //static __thread std::vector<int> stream_counters_;
+  static std::vector<int>& getStreamCounters();
   int num_workers_;
 
   // Exception/error handling
